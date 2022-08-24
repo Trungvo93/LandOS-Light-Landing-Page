@@ -16,7 +16,9 @@ nav {
     align-items: center;
     position: fixed;
     width: 100%;
+    height: 90px;
     background-color: #ffffff;
+    z-index: 999;
 }
 
 .nav__menu--horizontal{
@@ -48,31 +50,50 @@ nav {
 
 /*BANNER*/
 .banner{
-    padding: 120px;
+    padding: 120px 0px;
+    position: relative;
+    top: 90px;
 }
 .banner--container{
     padding: 0 40px;
     display: flex;
+    margin: auto;
+    gap:120px;
+    max-width: 1280px;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
+}
+.banner__info{
+    flex-grow: 3;
+    width: 100%;
+    animation: banner_info_up 0.7s ease-in-out;
 }
 .banner__info--header{
     h1{
         font-weight: 700;
-        font-size: 48px;
-        line-height: 57.6px;
+        font-size: 3em;
+        line-height: 1.2;
         letter-spacing: -1px;
+        width:100%;
+        margin-bottom: 20px;
     }
 }
 .banner__info--text{
-    span{
+    max-width: 40ch;
+    margin-bottom: 20px;
+    p{
         color: #666666;
     }
 }
-
+.banner__info--prices{
+    margin-bottom: 40px;
+}
 .banner__info--price{
     font-size: 28.8px;
     font-weight: 700;
     line-height: 28.8px;
+    margin-right: 8px;
 }
 .banner__info--strikethrough{
     color: #828282;
@@ -88,11 +109,27 @@ nav {
         padding: 12px 32px;
         border-radius: 50px;
         border: 0px;
+        cursor: pointer;
     }
 }
-
+.banner__img{
+    width: 50%;
+    flex-shrink: 0;
+}
 .banner__img--front{
-    width: 600px;   
+    width: 100%;
     border-radius: 20px;
     box-shadow:  0px 0px 30px rgba(0, 0, 0, .2);
+}
+
+
+@keyframes banner_info_up{
+    0%{
+        transform: translateY(90px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
