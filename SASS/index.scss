@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -21,88 +21,115 @@ nav {
     z-index: 999;
 }
 
-.nav__menu--horizontal{
-    
+.nav__menu--horizontal {
+
     list-style-type: none;
-    
-    li{
+    height: 100%;
+
+    li {
+
         display: inline-block;
-        padding: 0px 20px;
+        padding: 20px 20px;
     }
-    a{
+
+    a {
         text-decoration: none;
+        height: 100%;
     }
 }
-.nav__menu--horizontal li:last-child{
+
+.nav__menu--horizontal li:last-child {
     padding-right: 0px;
 }
 
-.nav__menu--btn{
+.nav__menu--horizontal a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.nav__menu--btn {
     font-weight: 600;
     padding: 12px 32px;
     background-color: #ff0000;
-    color: #ffffff;
+
     border-radius: 50px;
     border: 0px;
-    
+
+    a {
+        color: #ffffff;
+    }
+
+}
+
+.nav__menu--btn a:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 
 /*BANNER*/
-.banner{
+.banner {
     padding: 120px 0px;
     position: relative;
     top: 90px;
 }
-.banner--container{
+
+.banner--container {
     padding: 0 40px;
     display: flex;
     margin: auto;
-    gap:120px;
+    gap: 120px;
     max-width: 1280px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
-.banner__info{
+
+.banner__info {
     flex-grow: 3;
     width: 100%;
     animation: banner_info_up 0.7s ease-in-out;
 }
-.banner__info--header{
-    h1{
+
+.banner__info--header {
+    h1 {
         font-weight: 700;
         font-size: 3em;
         line-height: 1.2;
         letter-spacing: -1px;
-        width:100%;
+        width: 100%;
         margin-bottom: 20px;
     }
 }
-.banner__info--text{
+
+.banner__info--text {
     max-width: 40ch;
     margin-bottom: 20px;
-    p{
+
+    p {
         color: #666666;
     }
 }
-.banner__info--prices{
+
+.banner__info--prices {
     margin-bottom: 40px;
 }
-.banner__info--price{
+
+.banner__info--price {
     font-size: 28.8px;
     font-weight: 700;
     line-height: 28.8px;
     margin-right: 8px;
 }
-.banner__info--strikethrough{
+
+.banner__info--strikethrough {
     color: #828282;
     line-height: 22.4px;
     text-decoration: line-through;
 }
 
-.banner__info--btn{
-    button{
+.banner__info--btn {
+    button {
         background-color: #ff0000;
         color: #ffffff;
         font-weight: 600;
@@ -112,23 +139,26 @@ nav {
         cursor: pointer;
     }
 }
-.banner__img{
+
+.banner__img {
     width: 50%;
     flex-shrink: 0;
 }
-.banner__img--front{
+
+.banner__img--front {
     width: 100%;
     border-radius: 20px;
-    box-shadow:  0px 0px 30px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
 }
 
 
-@keyframes banner_info_up{
-    0%{
+@keyframes banner_info_up {
+    0% {
         transform: translateY(90px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
