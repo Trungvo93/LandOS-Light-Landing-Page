@@ -7,7 +7,9 @@
     line-height: 25.6px;
     font-family: 'Inter', sans-serif;
 }
-
+:root{
+    --color-gray:#828282;
+}
 /*NAV*/
 nav {
     padding: 25px 40px;
@@ -90,6 +92,17 @@ nav {
     width: 100%;
     animation: banner_info_up 0.7s ease-in-out;
 }
+@keyframes banner_info_up {
+    0% {
+        transform: translateY(90px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 .banner__info--header {
     h1 {
@@ -143,23 +156,63 @@ nav {
 .banner__img {
     width: 50%;
     flex-shrink: 0;
+    position: relative;
 }
 
 .banner__img--front {
+    display: block;
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+    box-shadow: -7px 7px 30px 0 rgb(0 0 0 / 25%);
+}
+
+.banner__student-card{
+    width: 335px;
+    padding: 20px;
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%), inset 0 4px 0 0 red;
+    position: absolute;
+    bottom: -6.5%;
+    left: 10%;
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    h6{
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    p{
+        color: var(--color-gray);
+        font-size: 0.8rem;
+    }
 }
 
 
-@keyframes banner_info_up {
-    0% {
-        transform: translateY(90px);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
+.banner__img--dot{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    // background-color: #333333;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    img{
+        display: block;
     }
+}
+.banner__img--dot-left{
+    position: absolute;
+    bottom: 5%;
+    left: -5%;
+}
+.banner__img--dot-right{
+    position: absolute;
+    top: 10%;
+    right: -5%;
+}
+.banner__img--circle-center{
+    position: absolute;
+    top: -3%;
 }
